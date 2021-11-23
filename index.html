@@ -16,6 +16,56 @@
         <title>The 'D Team</title>
     </head>
     <body>
+
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="assets/img/home.gif" alt="#" ondragstart="return false;"/></div>
+      </div>
+      <!-- end loader --> 
+
+  <script>
+	window.oncontextmenu = function () {
+				return false;
+			}
+			$(document).keydown(function (event) {
+				if (event.keyCode == 123) {
+					return false;
+				}
+				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+					return false;
+				}
+			});
+		</script>
+
+<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+</script>
+
+
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -465,6 +515,9 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+<script src="assets/js/custom.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
         <audio autoplay> 
             <source src="assets/audio/thedteam.mp3" type="audio/ogg"> 
