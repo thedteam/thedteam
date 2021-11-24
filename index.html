@@ -23,49 +23,6 @@
       </div>
       <!-- end loader --> 
 
-  <script>
-	window.oncontextmenu = function () {
-				return false;
-			}
-			$(document).keydown(function (event) {
-				if (event.keyCode == 123) {
-					return false;
-				}
-				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-					return false;
-				}
-			});
-		</script>
-
-<script language="JavaScript">
-
-//////////F12 disable code////////////////////////
-    document.onkeypress = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-           //alert('No F-12');
-            return false;
-        }
-    }
-    document.onmousedown = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-            //alert('No F-keys');
-            return false;
-        }
-    }
-document.onkeydown = function (event) {
-        event = (event || window.event);
-        if (event.keyCode == 123) {
-            //alert('No F-keys');
-            return false;
-        }
-    }
-/////////////////////end///////////////////////
-</script>
-
-
-
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -459,26 +416,38 @@ document.onkeydown = function (event) {
                             </div>
                         </div>
                     </div>
-
+                    <div data-bs-version="5.1" class="form6 cid-sPF3DqdPdp" id="form6-3">
+                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="BcSlYMYE7LOddYbA+h2dJhem+YSPVk744MzfeD5tctlC3q5k0rzHhDdfPWwX7h69nUyoiXib0/xGRXA9ars9WEK6CqMWMSTbqisW3NAQlhsL63LyucU3sBeA3906Nw6z">
+                                <div class="row">
+                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                                </div>
+                                <div class="dragArea row">
                     <form action="" class="contact__form">
                         <div class="contact__inputs">
-                            <div class="contact__content">
-                                <input type="email" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Email</label>
+                            <div class="contact__content" data-for="name">
+                                <input type="text" name="name" placeholder=" " class="contact__input" data-form-field="name" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Name*</label>
                             </div>
 
-                            <div class="contact__content">
-                                <input type="text" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Subject</label>
+                            <div class="contact__content" data-for="email">
+                                <input type="email" name="email" placeholder=" " class="contact__input" data-form-field="email" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Email*</label>
                             </div>
 
-                            <div class="contact__content contact__area">
-                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
-                                <label for="" class="contact__label">Message</label>
+                            <div class="contact__content" data-for="phone">
+                                <input type="text" name="phone" placeholder=" " class="contact__input" data-form-field="phone" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Phone*</label>
+                            </div>
+
+                            <div class="contact__content contact__area" data-for="message">
+                                <textarea name="message" placeholder=" " class="contact__input" data-form-field="message" class="form-control" value="" id="name-form6-3"></textarea>                              
+                                <label for="" class="contact__label">Message*</label>
                             </div>
                         </div>
 
-                        <button class="button button--flex">
+                        <button type="submit" class="button button--flex">
                             Send Message
                             <i class="ri-arrow-right-up-line button__icon"></i>
                         </button>
@@ -486,6 +455,7 @@ document.onkeydown = function (event) {
                 </div>
             </section>
         </main>
+
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
@@ -499,13 +469,28 @@ document.onkeydown = function (event) {
                         Subscribe to our newsletter <br> to stay update
                     </h3>
 
-                    <div class="footer__subscribe">
-                        <input type="email" placeholder="Enter your email" class="footer__input">
+                    <div data-bs-version="5.1" class="form9 cid-sPENRPeBMm" id="form9-0">
+                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="BcSlYMYE7LOddYbA+h2dJhem+YSPVk744MzfeD5tctlC3q5k0rzHhDdfPWwX7h69nUyoiXib0/xGRXA9ars9WEK6CqMWMSTbqisW3NAQlhsL63LyucU3sBeA3906Nw6z">
+                                <div class="row">
+                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                                </div>
 
-                        <button class="button button--flex footer__button">
-                            Subscribe
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
+                                <div class="dragArea row">
+                                    <div class="col-lg-12">  
+                                    </div>
+                                    <div class="footer__subscribe">
+                                        <input type="email" name="email" placeholder="Enter your email" data-form-field="email" class="footer__input" id="email-form9-0">
+                
+                                        <button type="submit" class="button button--flex footer__button">
+                                            Subscribe
+                                            <i class="ri-arrow-right-up-line button__icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
@@ -558,7 +543,7 @@ document.onkeydown = function (event) {
 
             <p class="footer__copy">&#169; The 'D Team. All rigths reserved</p>
         </footer>
-        
+
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up"> 
             <i class="ri-arrow-up-fill scrollup__icon"></i>
@@ -570,7 +555,50 @@ document.onkeydown = function (event) {
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
 
-<script src="assets/js/custom.js"></script> 
+ <script>
+	window.oncontextmenu = function () {
+				return false;
+			}
+			$(document).keydown(function (event) {
+				if (event.keyCode == 123) {
+					return false;
+				}
+				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+					return false;
+				}
+			});
+		</script>
+
+<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+</script>
+
+
+<script src="assets/js/formoid.min.js"></script>  
+<script src="assets/js/preloader.js"></script> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
         <audio autoplay> 
