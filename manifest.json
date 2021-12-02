@@ -1,0 +1,24 @@
+{
+  "name": "The D Team",
+  "short_name": "The D Team",
+  "description": "Graphics-Print-Web",
+  "start_url": "/?utm_source=a2hs",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "prefer_related_applications": true,
+  "related_applications": [{
+    "platform": "webapp",
+    "url": "/manifest.json"
+  }],
+  "gcm_sender_id": "880952732068",
+  "icons": [
+    {
+      "src": "assets\img\icon-192.png",
+      "sizes": "192x192"
+    }
+
+  ]
+}
