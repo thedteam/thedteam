@@ -1,6 +1,6 @@
 
 // Files to cache
-const cacheName = 'thedteam-v1';
+const cacheName = 'thedteam';
 const appShellFiles = [
   '/thedteam/',
   '/thedteam/index.html',
