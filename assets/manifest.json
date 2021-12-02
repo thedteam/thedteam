@@ -2,7 +2,7 @@
   "name": "The D Team",
   "short_name": "The D Team",
   "description": "Graphics | Print | Web",
-  "start_url": "/?utm_source=a2hs",
+  "start_url": "https://thedteam.github.io/thedteam/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
