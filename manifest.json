@@ -16,7 +16,7 @@
   "gcm_sender_id": "880952732068",
   "icons": [
     {
-      "src": "assets\img\icon-192.png",
+      "src": "/assets/icons/icon-192.png",
       "sizes": "192x192"
     }
 
