@@ -134,11 +134,6 @@ const sr = ScrollReveal({
     // reset: true
 })
 
-// Registering Service Worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
-}
-
 sr.reveal(`.home__data`)
 sr.reveal(`.home__img`, {delay: 500})
 sr.reveal(`.home__social`, {delay: 600})
