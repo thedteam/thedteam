@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="manifest" href="https://thedteam.github.io/thedteam/manifest.webmanifest">
+	<link rel="manifest" href="manifest.json">
 
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="assets//icons/icon-192.png" type="image/x-icon">
@@ -14,7 +14,11 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/gallery.css">
-        <link rel="stylesheet" href="assets/css/testimonials.css">
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
 
 
         <title>The 'D Team</title>
@@ -647,8 +651,7 @@ document.onkeydown = function (event) {
 <script src="assets/js/formoid.min.js"></script>  
 <script src="assets/js/preloader.js"></script> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="assets/js/snowstorm.js"></script>
-
+<script src="assets/js/snowstorm.js"></script
 
         <audio autoplay> 
             <source src="assets/audio/thedteam.mp3" type="audio/ogg"> 
