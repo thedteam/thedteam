@@ -1,12 +1,12 @@
 
   
   {
-    "name": "The D Team",
-    "short_name": "The'DTeam",
+    "name": "The 'D Team",
+    "short_name": "#beingdifferent",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#2A3443",
-    "description": "Graphic-Print-Web",
+    "description": "The 'D Team | Graphic-Print-Web",
     "theme_color": "#2A3443",
     "icons": [
       {
