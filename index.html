@@ -400,6 +400,48 @@
 </div>
 </section>
 
+            <!--==================== APP ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="assets/img/movil-app.png" alt="" class="about__img" ondragstart="return false;">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            App is Aviable <br> 
+                        </h2>
+
+                        <p class="about__description">
+                            Find our application and download it, you can make, service orders, see your deliveries on the way and much more.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                PWA Ready
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                UI Components
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                User Friendly Design
+                            </p>
+                        </div>
+
+                        <div class="app__stores">
+                            <a href="#"><img src="assets/img/app1.png" width="150px" alt="" ></a> &nbsp; &nbsp;
+                            <a href="#"><img src="assets/img/app2.png" width="150px" alt="" ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
             <!--==================== QUESTIONS ====================-->
             <section class="questions section" id="faqs">
                 <h2 class="section__title-center questions__title container">
@@ -662,6 +704,33 @@ document.onkeydown = function (event) {
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="assets/js/snowstorm.js"></script>
 <script defer src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
 <audio autoplay>
   <source src="assets/audio/tdt.mp3" type="audio/ogg">
