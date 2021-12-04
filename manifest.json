@@ -6,6 +6,20 @@
     "background_color": "#2A3443",
     "description": "The 'D Team | Graphic-Print-Web",
     "theme_color": "#2A3443",
+    "screenshots": [
+      {
+        "src": "assets/screen.png",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/screen.png",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/screen.png",
+        "type": "image/png"
+      }
+    ],
     "icons": [
       {
         "src": "icon-512.png",
