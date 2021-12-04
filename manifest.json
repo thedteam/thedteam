@@ -3,7 +3,6 @@
   "short_name": "The 'D Team #beingdifferent",
   "description": "The 'D Team | Graphic-Print-Web",
   "start_url": "index.html",
-  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#ffffff",
@@ -13,7 +12,6 @@
     "platform": "webapp",
     "url": "/manifest.json"
   }],
-  "gcm_sender_id": "880952732068",
   "icons": [
     {
       "src": "icons/icon-512x512.png",
