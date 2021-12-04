@@ -358,8 +358,8 @@
           </div>
 &nbsp;
           <div>
-            <div class="container">
-                <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" width="100%" id="player" ondragstart="return false;">
+            <div class="">
+                <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"  id="player" ondragstart="return false;">
                                 <!-- Video files -->
                                 <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576" ondragstart="return false;">
                                 <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720" ondragstart="return false;">
@@ -367,9 +367,9 @@
                                 <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440" ondragstart="return false;">
                 
                                 <!-- Caption files -->
-                                <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                    default>
-                                <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                                <track kind="captions" label="English" srclang="en" src="View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+                                <track kind="captions" label="Kannada" srclang="Kan" src="View_From_A_Blue_Moon_Trailer-HD.kan.vtt">
+                                <track kind="captions" label="Hindi" srclang="hin" src="View_From_A_Blue_Moon_Trailer-HD.hin.vtt">
                 
                                 <!-- Fallback for browsers that don't support the <video> element -->
                                 <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download ondragstart="return false;">Download</a>
@@ -380,7 +380,6 @@
               <style>
                   .plyr {
   border-radius: 8px;
-
 }
               </style>
               <script>
