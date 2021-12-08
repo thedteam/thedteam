@@ -24,7 +24,7 @@
       "name": "Contact us",
       "short_name": "Contact us",
       "description": "",
-      "url": "index.html##contact",
+      "url": "index.html#contact",
       "icons": [{ "src": "icons/icon-192x192.png", "sizes": "192x192" }]
     }
 
