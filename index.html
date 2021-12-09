@@ -435,40 +435,40 @@
 
 <div class="product__container grid">
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo1.png" ></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo1.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">	 
-<div class="slide-in-right slide"><img src="assets/img/logo/logo2.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo2.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">		  
-<div class="slide-in-right slide"><img src="assets/img/logo/logo3.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo3.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo4.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo4.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo5.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo5.png"ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo6.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo6.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo7.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo7.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo8.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo8.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo9.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo9.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo10.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo10.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo11.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo11.png" ondragstart="return false;" ></a></div>
 </article>
 <article class="product__card">
-<div class="slide-in-right slide"><img src="assets/img/logo/logo12.png"></a></div>
+<div class="slide-in-right slide"><img src="assets/img/logo/logo12.png" ondragstart="return false;" ></a></div>
 </article>
 
 </div>
@@ -524,12 +524,48 @@
                         </div>
 
                         <div class="app__stores">
-                            <a href="#"><img src="assets/img/app1.png" width="150px" alt="" ></a> &nbsp; &nbsp;
-                            <a href="#"><img src="assets/img/app2.png" width="150px" alt="" ></a>
+                        <div class="add-button">
+                            <a href="#"><img src="assets/img/app1.png" width="150px" alt="" ondragstart="return false;" ></a> &nbsp; &nbsp;
+                            <a href="#"><img src="assets/img/app2.png" width="150px" alt="" ondragstart="return false;" ></a>
                         </div>
+                    </div>
                     </div>
                 </div>
             </section>
+    
+<script>
+            // Code to handle install prompt on desktop
+
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
+
+  addBtn.addEventListener('click', () => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+
+</script>
 
 
             <!--==================== QUESTIONS ====================-->
