@@ -477,7 +477,24 @@
             <!--==================== APP ====================-->
             <section class="about section container">
                 <div class="about__container grid">
+                    <div id="content-desktop">
                     <img src="assets/img/movil-app.png" alt="" class="about__img" ondragstart="return false;">
+                    </div>
+                    <div id="content-mobile">
+                    <img src="assets/img/desk-app.png" alt="" class="about__img" ondragstart="return false;">
+                    </div>
+                    
+<style>
+    #content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+</style>
 
                     <div class="about__data">
                         <h2 class="section__title about__title">
