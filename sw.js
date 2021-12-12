@@ -41,7 +41,6 @@ cFiles = [
   "assets/img/movil-app.png",
   "assets/img/app1.png",
   "assets/img/app2.png",
-  "icon-512.png",
   "favicon.png",
   "assets/scss/base/_base.scss",
   "assets/scss/components/_about.scss",
