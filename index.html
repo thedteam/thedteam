@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- (C) WEB APP MANIFEST -->
+<!-- https://web.dev/add-manifest/ -->
+<link rel="manifest" href="manifest.json">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!-- (E) ANDROID/CHROME -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="white">
+
+<!-- (F) IOS APP ICON + MOBILE SAFARI -->
+<link rel="apple-touch-icon" href="assets/icons/icon-72x72.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Hello World">
+
+<!-- (G) WINDOWS -->
+<meta name="msapplication-TileImage" content="assets/icons/icon-72x72.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+    <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+    <script src="spotlight.bundle.js"></script>
+
+            <!--==================== UNICONS ====================-->
+            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
+            <!--==================== CSS ====================-->
+            <link rel="stylesheet" href="assets/priceassets/css/styles.css">
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const player = Plyr.setup('.js-player');
+  });
+</script>
+
+    <title>The 'D Team</title>
+<meta name="description" content="The 'D Team | Graphic-Print-Web">
+    <meta property="og:url" content="https://thedteam.github.io/thedteam"/>
+    <meta property="og:site_name" content="The 'D Team" />
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://thedteam.github.io/thedteam/assets/icons/icon-256x256.png" />
+</head>
+<body>
+
+  <!-- loader  -->
+  <div class="loader_bg">
+     <div class="loader"><img src="assets/img/home.gif" alt="#" ondragstart="return false;"/></div>
+  </div>
+  <!-- end loader --> 
+        <!--==================== HEADER ====================-->
+        <div class="disable">
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"></i> The 'D Team
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#service" class="nav__link">Service</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/home.gif" alt="" class="home__img" ondragstart="return false;">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Creative&Digital <br> Graphic|Print|Web
+                        </h1>
+                        <p class="home__description">
+                            Creating incredible graphic design for your buisness or brand. 
+                            Add enlights to your new ideas.
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/different.by.designing/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/deepakdesigns10" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/deepak_designs" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Graphic design service! https://bit.ly/thedteam" target="_blank" class="home__social-link">
+                                <i class="ri-whatsapp-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="assets/img/about.png" alt="" class="about__img" ondragstart="return false;">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Who we really are & <br> why choose us
+                        </h2>
+
+                        <p class="about__description">
+                            We have over 4.5+ unbiased ratings and our customers 
+                            trust our service process and delivery service every time.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We always deliver on time.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We give you guides to protect and care for your service.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We always come over for a check-up after sale.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                100% money back guaranteed.
+                            </p>
+                        </div>
+
+                        <a href="#contact" class="button--link button--flex">
+                            Call Now <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Steps to start your <br> Design off right
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Choose Service</h3>
+                            <p class="steps__card-description">
+                                We have several varieties of service you can choose from.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Place an order</h3>
+                            <p class="steps__card-description">
+                                Once your order is set, we move to the next step which is the mailing.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">Get service delivered</h3>
+                            <p class="steps__card-description">
+                                Our delivery process is easy, you receive the service direct to your phone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SERVICE ====================-->
+            <section class="product section container" id="service">
+                <h2 class="section__title-center">
+                    Check out our <br> Service
+                </h2>
+
+                <p class="product__description">
+                    Here are some selected service from our media agency, all are modren 
+                    service and can enhance the future. Buy and enjoy best quality.
+                </p>
+
+                <div class="product__container grid">
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product1.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Graphic Design</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                        <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Graphic design service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product2.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Branding</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                        <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Branding service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product3.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Advertising</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                        <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Advertising service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                         </a>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product4.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Video Production</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                        <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Video Production service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                         </a>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product5.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Web Development</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                        <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Web Development service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="assets/img/product6.png" alt="" class="product__img" ondragstart="return false;">
+
+                        <h3 class="product__title">Printing</h3>
+                        <span class="product__price">₹1234 ~ onwards</span>
+
+                        <button class="button--flex product__button">
+                         <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Printing service! https://bit.ly/thedteam" target="_blank" class="button--flex product__button">
+                            <i class="ri-whatsapp-fill"></i>
+                         </a>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+             <!--==================== GALLERY ====================-->
+ <section class="product section container">
+    <h2 class="section__title-center">
+        Gallery
+    </h2>
+
+    <div class="columnrow">
+        <div class="column">
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/-gS54SWrHMg/2000x1000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/AU1rKyKPJco/1000x2000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/AXfDvKOawZQ/1000x1000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/gKlkZrsG_Pw/2000x1000" alt="" ondragstart="return false;" />
+        </div>
+        <div class="column">
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/DVONaLgCRxo/1000x2000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/ZsgUsl8GATg/1000x2000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/CkagyZJ88kE/1000x1000" alt="" ondragstart="return false;" />
+        </div>
+        <div class="column">
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/PpQ4-HOZ_8U/2000x1000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/si7gjqJQj_8/1000x1000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/u0M0gyuexfE/1000x2000" alt="" ondragstart="return false;" />
+      
+          <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/aQcE3gDSSTY/1000x1000" alt="" ondragstart="return false;" />
+        </div>
+        <div class="column">
+            <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/GkCafprWKRo/1000x2000" alt="" ondragstart="return false;" />
+        
+            <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/OFlzoTfpRdw/1000x1000" alt="" ondragstart="return false;" />
+        
+            <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/YlFM0-LdHu8/1000x1000" alt=""ondragstart="return false;" />
+        
+            <img class="spotlight" data-play="true" data-autoslide="true" data-autohide="false" src="https://source.unsplash.com/c_Tc9ZELeYw/1000x1000" alt="" ondragstart="return false;" />
+          </div>
+&nbsp;
+          <div>
+            <div class="">
+                <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"  id="player" ondragstart="return false;">
+                                <!-- Video files -->
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576" ondragstart="return false;">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720" ondragstart="return false;">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080" ondragstart="return false;">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440" ondragstart="return false;">
+                
+                                <!-- Caption files -->
+                                <track kind="captions" label="English" srclang="en" src="View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+                                <track kind="captions" label="Kannada" srclang="Kan" src="View_From_A_Blue_Moon_Trailer-HD.kan.vtt">
+                                <track kind="captions" label="Hindi" srclang="hin" src="View_From_A_Blue_Moon_Trailer-HD.hin.vtt">
+                
+                                <!-- Fallback for browsers that don't support the <video> element -->
+                                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download ondragstart="return false;">Download</a>
+                            </video>
+                  
+                </div>
+
+              <style>
+                  .plyr {
+  border-radius: 8px;
+}    
+              </style>
+              <script>
+                  document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
+  
+  // Expose
+  window.player = player;
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+              </script>
+
+     </div>
+     
+ </section>
+    
+ <!--==================== CLIENT ====================-->
+            <section class="product section container" >
+                <h2 class="section__title-center">
+                    Client
+                </h2>
+
+<div class="product__container grid">
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo1.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">	 
+<div class="slide-in-right slide"><img src="assets/img/logo/logo2.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">		  
+<div class="slide-in-right slide"><img src="assets/img/logo/logo3.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo4.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo5.png"ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo6.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo7.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo8.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo9.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo10.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo11.png" ondragstart="return false;" ></a></div>
+</article>
+<article class="product__card">
+<div class="slide-in-right slide"><img src="assets/img/logo/logo12.png" ondragstart="return false;" ></a></div>
+</article>
+
+</div>
+</section>
+
+            <!--==================== APP ====================-->
+            <section class="about section container">
+                <div class="about__container grid">
+                    <img src="assets/img/movil-app.png" alt="" class="about__img" ondragstart="return false;">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            App is Available <br> 
+                        </h2>
+
+                        <p class="about__description">
+                            Find our application and download it, you can make, service orders, see your deliveries on the way and much more.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                PWA Ready
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                UI Components
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Dark / Light Mode
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                User Friendly Design
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Scan QR to view in Mobile
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                PWA App available 
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Add to Home Screen Prompt
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                User can explore Offline 
+                            </p>
+                        </div>
+
+                        <div class="app__stores">
+                        <div class="add-button">
+                            <img src="assets/img/app1.png" width="150px" alt="" ondragstart="return false;" /> &nbsp; &nbsp;
+                            <img src="assets/img/app2.png" width="150px" alt="" ondragstart="return false;" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+    
+<script>
+            // Code to handle install prompt on desktop
+
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
+
+  addBtn.addEventListener('click', () => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+</script>
+
+<!--==================== PRICE CARD ====================-->
+
+<section class="card container grid">
+    <h2 class="section__title-center">Pricing</h2>
+    <div class="card__container grid">
+        <!--==================== CARD 1 ====================-->
+        <article class="card__content grid">
+            <div class="card__pricing">
+                <div class="card__pricing-number">
+                    <span class="card__pricing-symbol">$</span>9
+                </div>
+                <span class="card__pricing-month">/month</span>
+            </div>
+
+            <header class="card__header">
+                <div class="card__header-circle grid">
+                    <img src="assets/priceassets/img/free-coin.png" alt="" class="card__header-img" ondragstart="return false;">
+                </div>
+                
+                <span class="card__header-subtitle">Common plan</span>
+                <h1 class="card__header-title">Basic</h1>
+            </header>
+            
+            <ul class="card__list grid">
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">3 user request</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">10 downloads per day</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Daily content updates</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Fully editable files</p>
+                </li>
+            </ul>
+            <button class="card__button"><a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Basic Pricing Plan! https://bit.ly/thedteam" style="color: #ffffff;" target="_blank" > Choose this plan  </a> </button> 
+            
+        </article>
+
+        <!--==================== CARD 2 ====================-->
+        <article class="card__content grid">
+            <div class="card__pricing">
+                <div class="card__pricing-number">
+                    <span class="card__pricing-symbol">$</span>19
+                </div>
+                <span class="card__pricing-month">/month</span>
+            </div>
+
+            <header class="card__header">
+                <div class="card__header-circle grid">
+                    <img src="assets/priceassets/img/pro-coin.png" alt="" class="card__header-img" ondragstart="return false;">
+                </div>
+
+                <span class="card__header-subtitle">Most popular</span>
+                <h1 class="card__header-title">Professional</h1>
+            </header>
+            
+            <ul class="card__list grid">
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">100 user request</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Unlimited downloads</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Unlock all features from our site</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Daily content updates</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Fully editable files</p>
+                </li>
+            </ul>
+
+            <button class="card__button"><a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Professional Pricing Plan! https://bit.ly/thedteam" style="color: #ffffff;" target="_blank" > Choose this plan  </a> </button>
+        </article>
+
+        <!--==================== CARD 3 ====================-->
+        <article class="card__content grid">
+            <div class="card__pricing">
+                <div class="card__pricing-number">
+                    <span class="card__pricing-symbol">$</span>29
+                </div>
+                <span class="card__pricing-month">/month</span>
+            </div>
+
+            <header class="card__header">
+                <div class="card__header-circle grid">
+                    <img src="assets/priceassets/img/enterprise-coin.png" alt="" class="card__header-img" ondragstart="return false;">
+                </div>
+
+                <span class="card__header-subtitle">For agencies</span>
+                <h1 class="card__header-title">Enterprise</h1>
+            </header>
+            
+            <ul class="card__list grid">
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Unlimited  user request</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Unlimited downloads</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Unlock all features from our site</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Daily content updates</p>
+                </li>
+                <li class="card__list-item">
+                    <i class="uil uil-check card__list-icon"></i>
+                    <p class="card__list-description">Fully editable files</p>
+                </li>
+            </ul>
+
+            <button class="card__button"><a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Enterprise Pricing Plan! https://bit.ly/thedteam" style="color: #ffffff;" target="_blank" > Choose this plan  </a> </button>
+        </article>
+    </div>
+</section>
+
+                        <!--==================== GOOLGE REVIEW ====================-->
+                        <section>
+                            <a href="https://search.google.com/local/writereview?placeid=ChIJgQ3wD9FtrjsRw_NJCfO4HTU" target="blank"> 
+                                 <center> <img src="assets/img/google/google_review.png" ondragstart="return false;" /> </center>
+                                </a>
+                                &nbsp; &nbsp;
+                                <a href="https://g.page/r/CcPzSQnzuB01EAE" target="blank"> 
+                                    <center> 
+                                        <img src="assets/img/google/google1.png" height="370" width="370" ondragstart="return false;" /> 
+                                        <img src="assets/img/google/google2.png" height="370" width="370" ondragstart="return false;" />
+                                        <img src="assets/img/google/google3.png" height="370" width="370" ondragstart="return false;" />
+                                    </center>
+                                   </a>
+                        </section>
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do i choose a service?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Service are easy way to add color energy and transform your 
+                                    design but which service is for you. Choose the right service.
+                                </p>
+                            </div>
+                        </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I change the service?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Service are easy way to add color energy and transform your 
+                                    design but which service is for you. Choose the right service.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Reach out to us today
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call us for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    <a href="tel:+917019043569" style="color: #009688; "> +91 70190 43569 </a> 
+                                </span>
+                            </div>
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">WhatsApp us for quick support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-whatsapp-fill"></i>
+                                    <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Graphic design service! https://bit.ly/thedteam" style="color: #009688;" target="_blank"> +91 70190 43569 </a>
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    <a href="mailto:thedteam18@gmail.com" style="color: #009688; ">thedteam18@gmail.com</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-bs-version="5.1" class="form6 cid-sPF3DqdPdp" id="form6-3">
+                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="BcSlYMYE7LOddYbA+h2dJhem+YSPVk744MzfeD5tctlC3q5k0rzHhDdfPWwX7h69nUyoiXib0/xGRXA9ars9WEK6CqMWMSTbqisW3NAQlhsL63LyucU3sBeA3906Nw6z">
+                                <div class="row">
+                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                                </div>
+                                <div class="dragArea row">
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content" data-for="name">
+                                <input type="text" name="name" placeholder=" " class="contact__input" data-form-field="name" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Name*</label>
+                            </div>
+
+                            <div class="contact__content" data-for="email">
+                                <input type="email" name="email" placeholder=" " class="contact__input" data-form-field="email" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Email*</label>
+                            </div>
+
+                            <div class="contact__content" data-for="phone">
+                                <input type="text" name="phone" placeholder=" " class="contact__input" data-form-field="phone" class="form-control" value="" id="name-form6-3">
+                                <label for="" class="contact__label">Phone*</label>
+                            </div>
+
+                            <div class="contact__content contact__area" data-for="message">
+                                <textarea name="message" placeholder=" " class="contact__input" data-form-field="message" class="form-control" value="" id="name-form6-3"></textarea>                              
+                                <label for="" class="contact__label">Message*</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-leaf-line footer__logo-icon"></i> The 'D Team
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our newsletter <br> to stay update
+                    </h3>
+
+                    <div data-bs-version="5.1" class="form9 cid-sPENRPeBMm" id="form9-0">
+                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                            <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="BcSlYMYE7LOddYbA+h2dJhem+YSPVk744MzfeD5tctlC3q5k0rzHhDdfPWwX7h69nUyoiXib0/xGRXA9ars9WEK6CqMWMSTbqisW3NAQlhsL63LyucU3sBeA3906Nw6z">
+                                <div class="row">
+                                    <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for subscribing!</div>
+                                    <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                                </div>
+
+                                <div class="dragArea row">
+                                    <div class="col-lg-12">  
+                                    </div>
+                                    <div class="footer__subscribe">
+                                        <input type="email" name="email" placeholder="Enter your email" data-form-field="email" class="footer__input" id="email-form9-0">
+                
+                                        <button type="submit" class="button button--flex footer__button">
+                                            Subscribe
+                                            <i class="ri-arrow-right-up-line button__icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">#262 - Chandapura,</li>
+                        <li class="footer__information">Bengaluru - 560099,</li>
+                        <li class="footer__information">Karnataka 29, India</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <a href="tel:+917019043569" class="footer__information" style="color: #009688;">+91 70190 43569</a>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/different.by.designing/" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/deepakdesigns10" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/deepak_designs" target="_blank" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://wa.me/+917019043569?text=Hi The D Team - I'm interested in Graphic design service! https://bit.ly/thedteam" target="_blank" class="footer__social-link">
+                                <i class="ri-whatsapp-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all payment_methods
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card" ondragstart="return false;">
+                        <img src="assets/img/card2.png" alt="" class="footer__card" ondragstart="return false;">
+                        <img src="assets/img/card3.png" alt="" class="footer__card" ondragstart="return false;">
+                        <img src="assets/img/card4.png" alt="" class="footer__card" ondragstart="return false;">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; The 'D Team. All rigths reserved</p>
+        </footer>
+    </div>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            window.oncontextmenu = function () {
+                        return false;
+                    }
+                    $(document).keydown(function (event) {
+                        if (event.keyCode == 123) {
+                            return false;
+                        }
+                        else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                            return false;
+                        }
+                    });
+                </script>
+        
+        <script language="JavaScript">
+        
+        //////////F12 disable code////////////////////////
+            document.onkeypress = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                   //alert('No F-12');
+                    return false;
+                }
+            }
+            document.onmousedown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        document.onkeydown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        /////////////////////end///////////////////////
+        </script>
+        
+        <script src="assets/js/formoid.min.js"></script>  
+        <script src="assets/js/preloader.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="assets/js/snowstorm.js"></script>
+        <script defer src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        
+        <script>!function(p,n,o){if(!(o=n.getElementById("brz-external-popup")))return(o=n.createElement("script")).async=1,o.id="brz-external-popup",o.src="https://2d4bd1e243f43c90c8d937fcda13dbcf.s3.amazonaws.com/assets/popup/popup.js",o.onload=e,void n.body.appendChild(o);function e(n,e){p.brzExternalPopup?p.brzExternalPopup("https://strawberry4139732.brizy.site"):(n=o.onload,o.onload=function(){n(),p.brzExternalPopup("https://strawberry4139732.brizy.site")})}e()}(window,document);</script>
+        
+        <audio autoplay>
+          <source src="assets/audio/tdt.mp3" type="audio/ogg">
+          <source src="assets/audio/tdt.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+
+    </body>
+</html>
