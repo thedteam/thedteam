@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>CodePen - 3D Flip Image with Text</title>
   <link rel="stylesheet" href="./style.css">
 
@@ -12,14 +13,54 @@
   <div class="flip-box-inner">
     <div class="flip-box-front">
 <a href="https://g.page/deepak-designs-bangalore?share">
-      <img src="DD Front.png" alt="" style="width:1520px;height:720px">
+      <img src="DD Front.png" alt="" style="width:1520px;height:720px" ondragstart="return false;">
     </div>
     <div class="flip-box-back">
-      <img src="DD Back.png" alt="" style="width:1520px;height:720px"></a>
+      <img src="DD Back.png" alt="" style="width:1520px;height:720px" ondragstart="return false;"></a>
     </div>
   </div>
 </div>
 <!-- partial -->
+        <script>
+            window.oncontextmenu = function () {
+                        return false;
+                    }
+                    $(document).keydown(function (event) {
+                        if (event.keyCode == 123) {
+                            return false;
+                        }
+                        else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                            return false;
+                        }
+                    });
+                </script>
+        
+        <script language="JavaScript">
+        
+        //////////F12 disable code////////////////////////
+            document.onkeypress = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                   //alert('No F-12');
+                    return false;
+                }
+            }
+            document.onmousedown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        document.onkeydown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        /////////////////////end///////////////////////
+        </script>
   
 </body>
 </html>
