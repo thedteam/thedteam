@@ -73,9 +73,21 @@
                 margin: 20px auto;
             }
         }
+/*----------------------------
+    Disable Text Selection
+----------------------------*/
+
+.disable {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
     </style>
 </head>
 <body>
+<div class="disable">
     <div class="container">
         <h1 class="no-print">TDT QR Code Generator</h1>
         <div class="form-group">
@@ -152,6 +164,9 @@
             // Set download link href to the QR code image data URL
             downloadLink.href = base64DataUrl;
         });
+
+
     </script>
+</div>
 </body>
 </html>
