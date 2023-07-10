@@ -76,14 +76,14 @@
 /*----------------------------
     Disable Text Selection
 ----------------------------*/
-
 .disable {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-}
+  -webkit-touch-callout: none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  }
     </style>
 </head>
 <body>
@@ -124,12 +124,17 @@
                 height: 200,
             });
 
+	    // Get the generated QR code image element
+            var qrCodeImg = qrCodeDiv.querySelector('img');
+            qrCodeImg.draggable = false; // Disable image dragging
+
             // Add logo to QR code (replace 'logo.png' with your logo path)
             var logoImg = document.createElement('img');
             logoImg.src = 'TTDB.png';
             logoImg.style.width = '100px'; // Adjust logo width as needed
             logoImg.style.height = '60px'; // Adjust logo height as needed
             logoImg.style.marginTop = '10px';
+	    logoImg.draggable = false; // Disable image dragging
 
             qrCodeDiv.appendChild(logoImg);
 
