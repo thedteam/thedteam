@@ -2,24 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>TDT QR Code Generator</title>
     <style>
         body {
-            color: rgb(255, 255, 255);
-            background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         }
-        
         .container {
             max-width: 400px;
             margin: 50px auto;
             text-align: center;
         }
-        
         .form-group {
             margin-bottom: 20px;
         }
-        
         #qr-code-container {
             display: flex;
             justify-content: center;
@@ -27,13 +24,11 @@
             flex-direction: column;
             margin-top: 20px;
         }
-        
         #qr-code {
             margin-top: 20px;
             padding: 10px;
             background-color: white;
         }
-        
         #generate-button {
             padding: 10px 20px;
             background-color: #007bff;
@@ -41,16 +36,13 @@
             border: none;
             cursor: pointer;
         }
-        
         #generate-button:hover {
             background-color: #0069d9;
         }
-        
         #time-date {
             font-size: 14px;
             margin-top: 10px;
         }
-        
         #print-button,
         #download-button {
             margin-top: 10px;
@@ -60,26 +52,21 @@
             border: none;
             cursor: pointer;
         }
-        
         #download-button:hover {
             background-color: #218838;
         }
-        
         .hidden {
             display: none;
         }
-        
         .visible {
             display: block;
         }
-        
         @media print {
             .no-print {
                 display: none;
             }
         }
-        
-        /* Mobile screen compatibility */
+/* Mobile screen compatibility */
         @media only screen and (max-width: 600px) {
             .container {
                 max-width: 300px;
@@ -101,14 +88,70 @@
         <div id="qr-code-container">
             <div id="qr-code"></div>
             <div id="time-date"></div>
-            <button id="print-button" class="hidden no-print">Print</button>
+            <button id="print-button" class="hidden no-print" >Print</button>
             <a href="#" id="download-button" class="hidden no-print" download="qrcode.png">Download</a>
         </div>
     </div>
 
     <script src="qrcode.min.js"></script>
     <script>
-        // JavaScript code remains the same
+        document.getElementById('generate-button').addEventListener('click', function() {
+            var text = document.getElementById('text-input').value;
+            var qrCodeDiv = document.getElementById('qr-code');
+            var timeDateDiv = document.getElementById('time-date');
+            var printButton = document.getElementById('print-button');
+            var downloadButton = document.getElementById('download-button');
+
+            // Clear existing QR code if any
+            qrCodeDiv.innerHTML = '';
+
+            // Generate new QR code
+            var qrCode = new QRCode(qrCodeDiv, {
+                text: text,
+                width: 200,
+                height: 200,
+            });
+
+            // Add logo to QR code (replace 'logo.png' with your logo path)
+            var logoImg = document.createElement('img');
+            logoImg.src = 'TTDB.png';
+            logoImg.style.width = '100px'; // Adjust logo width as needed
+            logoImg.style.height = '60px'; // Adjust logo height as needed
+            logoImg.style.marginTop = '10px';
+
+            qrCodeDiv.appendChild(logoImg);
+
+            // Display current time and date
+            var currentDate = new Date();
+            var timeDateStr = 'Generated on: ' + currentDate.toLocaleString();
+            timeDateDiv.textContent = timeDateStr;
+
+            // Show QR code and other elements
+            qrCodeDiv.classList.remove('hidden');
+            timeDateDiv.classList.remove('hidden');
+            printButton.classList.add('visible');
+            downloadButton.classList.add('visible');
+        });
+        document.getElementById('print-button').addEventListener('click', function() {
+            window.print();
+        });
+
+        document.getElementById('download-button').addEventListener('click', function() {
+            var qrCodeDiv = document.getElementById('qr-code');
+            var qrCodeImg = qrCodeDiv.querySelector('img');
+            var downloadLink = document.getElementById('download-button');
+
+            // Convert QR code image to Base64 data URL
+            var canvas = document.createElement('canvas');
+            canvas.width = qrCodeImg.width;
+            canvas.height = qrCodeImg.height;
+            var context = canvas.getContext('2d');
+            context.drawImage(qrCodeImg, 0, 0);
+            var base64DataUrl = canvas.toDataURL('image/png');
+
+            // Set download link href to the QR code image data URL
+            downloadLink.href = base64DataUrl;
+        });
     </script>
 </body>
 </html>
