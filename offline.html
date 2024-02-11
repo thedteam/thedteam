@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Offline</title>
+  <meta name="viewport" content="initial-scale=0.5, user-scalable=no">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="disable">
+<div class="row">
+  <div class="inner">
+    <img src="assets/img/home.gif" alt=""ondragstart="return false;">
+    <h1>You are Offline!!!</h1>
+    <p>Please check your network connection status.</p>
+     <div class="pulse-icon">
+       <div class="icon-wrap">
+         <i class="icon fa fa-wifi" aria-hidden="true"></i>
+       </div>
+       <div class="elements">
+         <div class="circle circle-outer"></div>
+         <div class="circle circle-inner"></div>
+         <div class="pulse pulse-1"></div>
+         <div class="pulse pulse-2"></div>
+         <div class="pulse pulse-3"></div>
+         <div class="pulse pulse-4"></div>
+         <div class="pulse pulse-5"></div>
+         <div class="pulse pulse-6"></div>
+         <div class="pulse pulse-7"></div>
+         <div class="pulse pulse-8"></div>
+         <div class="pulse pulse-9"></div>
+         <div class="pulse pulse-10"></div>
+       </div>
+    </div>
+
+  </div>
+</div>
+<!-- partial -->
+<style>
+    *{
+  box-sizing: border-box;
+}
+
+body{
+  background: #000000;
+  background: linear-gradient(-180deg , #000000 0%, #000000 100%);
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-attachment: fixed;
+}
+img{
+    height: 200px;
+    margin-top: -100px;
+}
+h1{
+  color: #fff;
+  text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+}
+p{
+  margin-bottom: 70px;
+  color: #eee;
+}
+footer {
+  text-align: center;
+  padding: 150px;
+  color: white;
+}
+.row{
+  position: relative;
+  width: 100%;
+  padding: 250px 15px 150px 15px;
+}
+.inner {
+  max-width: 1024px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+/*main element*/
+.pulse-icon{
+  position: relative;
+  display: inline-block;
+}
+/*icon styling here*/
+.pulse-icon .icon-wrap{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 12px 12px 0px rgba(0,0,0,0.1);
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  color: #000000;
+  background: #efefef;
+  position: relative;
+  z-index: 2;
+}
+.pulse-icon .icon{
+  line-height: 60px;
+  font-size: 1.75em;
+  animation: grow-shrink 4s ease-out infinite;
+}
+
+/*container of all circles and pulses*/
+.pulse-icon .elements{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.pulse-icon .circle{
+  border-radius: 50%;
+  position: absolute;
+}
+.pulse-icon .circle-inner{
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  left: -10px;
+  background: linear-gradient(-180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.1) 100%);
+  animation: grow-circles 4s linear infinite both;
+}
+.pulse-icon .circle-outer{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(-180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.1) 100%);
+  top: -20px;
+  left: -20px;
+  animation: grow-circles 4s linear infinite both;
+}
+
+/*series of x pulses of differing sizes*/
+.pulse-icon .pulse{
+  position: absolute;
+  animation: pulse-wave 4s linear infinite both;
+  border-radius: 50%;
+}
+.pulse-icon .pulse-1{
+  border: solid 1px rgba(255,255,255,0.25);
+  width: 200px;
+  height: 200px;
+  top: -70px;
+  left: -70px;
+}
+.pulse-icon .pulse-2{
+  border: solid 1px rgba(255,255,255,0.35);
+  width: 300px;
+  height: 300px;
+  top: -120px;
+  left: -120px;
+}
+.pulse-icon .pulse-3{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 400px;
+  height: 400px;
+  top: -170px;
+  left: -170px;
+}
+.pulse-icon .pulse-4{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 500px;
+  height: 500px;
+  top: -220px;
+  left: -220px;
+}
+.pulse-icon .pulse-5{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 600px;
+  height: 600px;
+  top: -270px;
+  left: -270px;
+}
+.pulse-icon .pulse-6{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 700px;
+  height: 700px;
+  top: -320px;
+  left: -320px;
+}
+.pulse-icon .pulse-7{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 800px;
+  height: 800px;
+  top: -370px;
+  left: -370px;
+}
+.pulse-icon .pulse-8{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 900px;
+  height: 900px;
+  top: -420px;
+  left: -420px;
+}
+.pulse-icon .pulse-9{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 1000px;
+  height: 1000px;
+  top: -470px;
+  left: -470px;
+}
+.pulse-icon .pulse-10{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 1100px;
+  height: 1100px;
+  top: -520px;
+  left: -520px;
+}
+
+/*Animation for the outewards pulsating waves*/
+@keyframes pulse-wave{
+  0%{
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1.0);
+  }
+}
+
+/*animation for the inner and outer wave items to grow*/
+@keyframes grow-circles{
+  0%{
+    opacity: 0.85;
+    transform: scale(1.0);
+  }
+  15%{
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  30%{
+    opacity: 0.85;
+    transform: scale(1.0);
+  }
+  
+}
+
+
+
+/*animation for the icon to slightly grow and shrink*/
+@keyframes grow-shrink{
+  0%{
+    transform: scale(1);
+  }
+  15%{
+    transform: scale(1.1);
+  }
+  30%{
+    transform: scale(1);
+  }
+}
+
+ /* Media Queries for Mobile Devices */
+ @media only screen and (max-width: 1200px) {
+      h1 {
+        font-size: 44px;
+      }
+      p {
+        font-size: 32px;
+      }
+      .pulse-icon .icon-wrap {
+  width: 60px;
+  height: 60px;
+      }
+
+      .row{
+  position: relative;
+  width: 100%;
+  padding: 600px 15px 150px 15px;
+}
+
+      .pulse-icon .icon {
+        font-size: 2em;
+      }
+      img{
+    height: 350px;
+    margin-top: -600px;
+}
+      footer {
+        font-size: 26px;
+        padding-top: 450px;
+      }
+    }
+
+    /*----------------------------
+    Disable Text Selection
+----------------------------*/
+.disable {
+  -webkit-touch-callout: none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  }
+</style>
+
+<script>
+    window.oncontextmenu = function () {
+                return false;
+            }
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                }
+                else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                    return false;
+                }
+            });
+        </script>
+
+<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+</script>
+  
+<center><footer>&#169; 2024 🧡The 'D Team</footer></center>
+</div>
+</body>
+</html>
