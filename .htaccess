@@ -1,4 +1,0 @@
-# Added www to URLs:
-RewriteEngine on
-RewriteCond %{HTTPS_HOST} !^www\.
-RewriteRule ^(.*)$ https://www.%{HTTPS_HOST}/$1 [R=301,L]
