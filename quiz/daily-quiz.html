@@ -267,7 +267,7 @@
         }
 
         /* Preloader Styles */
-#preloader0 {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -281,9 +281,9 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-.preloader-gif0 {
-    width: 180px; /* Adjust size as needed */
-    height: 180px; /* Adjust size as needed */
+.preloader-gif {
+    width: 1600px; /* Adjust size as needed */
+    height: 1000px; /* Adjust size as needed */
 }
 
 /* Keyframes for fade-in animation */
@@ -305,8 +305,8 @@
 </head>
 <body>
 <!-- Preloader -->
-<div id="preloader0">
-    <img src="https://dlink.thedteam.in/assets/img/logo.gif" alt="Loading..." class="preloader-gif0">
+<div id="preloader">
+    <img src="preloader.jpg" alt="Loading..." class="preloader-gif">
 </div>
 
     <!-- Quiz Interface -->
@@ -337,11 +337,6 @@
             <button class="restart-button" id="restart-btn">Restart Quiz</button>
         </div>
     </div>
-
-                <!-- Preloader -->
-                <div class="preloader" id="preloader">
-                    <img src="preloader.jpg" alt="Loading...">
-                </div>
 
     <script>
         // Quiz Data Array
@@ -480,7 +475,6 @@
         const progressBar = document.getElementById('progress-bar');
         const progressNumber = document.getElementById('progress-number');
         const confettiContainer = document.getElementById('confetti-container');
-        const preloader = document.getElementById('preloader');
 
         // Quiz State Variables
         let currentQuestion = 0;
@@ -568,18 +562,14 @@
             updateProgressBar();
         }
 
-        // Handle Next Button Click
-        nextBtn.addEventListener('click', () => {
-            showPreloader();
-            setTimeout(() => {
-                currentQuestion++;
-                if (currentQuestion < shuffledQuizData.length) {
-                    loadQuestion();
-                    hidePreloader();
-                } else {
-                    showScore();
-                }
-            }, 1000); // Simulate loading time of 1 second
+          // Handle Next Button Click
+          nextBtn.addEventListener('click', () => {
+            currentQuestion++;
+            if (currentQuestion < shuffledQuizData.length) {
+                loadQuestion();
+            } else {
+                showScore();
+            }
         });
 
         // Show Score Screen
@@ -657,21 +647,11 @@
             }
         }
 
-                // Preloader Functionality
-                function showPreloader() {
-            preloader.style.display = 'flex';
-        }
-
-        function hidePreloader() {
-            preloader.style.display = 'none';
-        }
-
-
         // Initialize the Quiz on Page Load
         window.onload = initQuiz;
 
         window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader0');
+    const preloader = document.getElementById('preloader');
     const mainContent = document.getElementById('main-content');
 
     // Duration for preloader visibility (e.g., 10 seconds)
