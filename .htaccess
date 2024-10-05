@@ -1,3 +1,12 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+https://www.youtube.com/embed/6A-UR4-0v_U?rel=0&&showinfo=0&autoplay=0&loop=0&t=20
+
+https://www.youtube.com/embed/yZD-i5p5UC0?autoplay=1&loop=1&playlist=yZD-i5p5UC0&t=20&mute=1&playsinline=1&controls=0&showinfo=0&autohide=1&allowfullscreen=true&mode=transparent
+
+https://www.youtube.com/embed/6A-UR4-0v_U?rel=0&enablejsapi=1&autoplay=1&loop=1&playlist=6A-UR4-0v_U&t=20&mute=1&playsinline=1&controls=0&showinfo=0&autohide=1&allowfullscreen=true&mode=transparent
+
+https://software.download.prss.microsoft.com/dbazure/Win11_24H2_English_x64.iso?t=a7cf21a6-0089-484f-9e7e-85fb64829909&P1=1728061299&P2=601&P3=2&P4=28Wos7uPj13kMow16ikJdoAh5Kh7Pt1%2fCMIta2tsjSJUuuVR8RV76kNaxWufA0QxzLHhJfVp3Q5VGW7sojJcBdHrJqvAHJ28WxvlU3dVNYSUZLFAXHckVe0ILQeHDWtuPhmO44hkopdfQACK3LMy%2bzB0fKFGjRzp5hDGA7z0ipaXYFil%2bxMlHnKEzoMn%2fZhNWexK5tFxp6EIU%2fs5i1or5l6pcRJN1A7IB31QMVa2rxwiYIsyZQu0r3NuTU%2b8RWdiUTVac%2f4qo4hWXw4ykDYQQid%2bXUXp%2f1YmKYcxrPiXMetbEgo7Y7NUIa%2bcoSsJt7kM0HsbQi%2fQhN9dYZdiW%2bku8Q%3d%3d
