@@ -1105,8 +1105,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                 <label for="" class="contact__label">Message*</label>
                             </div>
                         </div>
-<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu"></div>
-                        <button type="submit" class="button button--flex">
+<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu" data-callback="recaptchaCallback"></div>
+                        <button type="submit" class="button button--flex" id="btnSubmit">
                             Send Message
                             <i class="ri-arrow-right-up-line button__icon"></i>
                         </button>
@@ -1114,6 +1114,17 @@ window.addEventListener('beforeinstallprompt', (e) => {
                 </div>
             </section>
         </main>
+
+<script>
+    function recaptchaCallback() {
+        var btnSubmit = document.getElementById("btnSubmit");
+
+        if ( btnSubmit.classList.contains("hidden") ) {
+            btnSubmit.classList.remove("hidden");
+            btnSubmitclassList.add("show");
+        }
+    }
+</script>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
@@ -1139,7 +1150,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                     <div class="col-lg-12">  
                                     </div>
                                     <div class="footer__subscribe">
-                                        <input type="email" name="email" placeholder="Enter your email" data-form-field="email" class="footer__input" id="email-form9-0">
+                                        <input type="email" name="email" placeholder="Enter your email" data-form-field="email" class="footer__input" id="email-form9-0" required />
                 
                                         <button type="submit" class="button button--flex footer__button">
                                             Subscribe
