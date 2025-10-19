@@ -11,7 +11,8 @@
   gtag('config', 'G-XR1B09K7X4');
 </script>
 
-
+<!-- reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -1085,26 +1086,26 @@ window.addEventListener('beforeinstallprompt', (e) => {
                     <form action="" class="contact__form">
                         <div class="contact__inputs">
                             <div class="contact__content" data-for="name">
-                                <input type="text" name="name" placeholder=" " class="contact__input" data-form-field="name" class="form-control" value="" id="name-form6-3">
+                                <input type="text" name="name" placeholder=" " class="contact__input" data-form-field="name" class="form-control" value="" id="name-form6-3" required />
                                 <label for="" class="contact__label">Name*</label>
                             </div>
 
                             <div class="contact__content" data-for="email">
-                                <input type="email" name="email" placeholder=" " class="contact__input" data-form-field="email" class="form-control" value="" id="name-form6-3">
+                                <input type="email" name="email" placeholder=" " class="contact__input" data-form-field="email" class="form-control" value="" id="name-form6-3" required />
                                 <label for="" class="contact__label">Email*</label>
                             </div>
 
                             <div class="contact__content" data-for="phone">
-                                <input type="text" name="phone" placeholder=" " class="contact__input" data-form-field="phone" class="form-control" value="" id="name-form6-3">
+                                <input type="tel" name="phone" placeholder=" " class="contact__input" data-form-field="phone" class="form-control" value="" id="name-form6-3" pattern="[789][0-9]{9}" required />
                                 <label for="" class="contact__label">Phone*</label>
                             </div>
 
                             <div class="contact__content contact__area" data-for="message">
-                                <textarea name="message" placeholder=" " class="contact__input" data-form-field="message" class="form-control" value="" id="name-form6-3"></textarea>                              
+                                <textarea name="message" placeholder=" " class="contact__input" data-form-field="message" class="form-control" value="" id="name-form6-3" required /></textarea>                              
                                 <label for="" class="contact__label">Message*</label>
                             </div>
                         </div>
-
+<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu"></div>
                         <button type="submit" class="button button--flex">
                             Send Message
                             <i class="ri-arrow-right-up-line button__icon"></i>
