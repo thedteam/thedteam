@@ -1105,8 +1105,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                 <label for="" class="contact__label">Message*</label>
                             </div>
                         </div>
-<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu" data-callback="recaptchaCallback"></div>
-                        <button type="submit" class="button button--flex" id="btnSubmit">
+<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu"></div>
+                        <button type="submit" class="button button--flex">
                             Send Message
                             <i class="ri-arrow-right-up-line button__icon"></i>
                         </button>
@@ -1114,17 +1114,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
                 </div>
             </section>
         </main>
-
-<script>
-    function recaptchaCallback() {
-        var btnSubmit = document.getElementById("btnSubmit");
-
-        if ( btnSubmit.classList.contains("hidden") ) {
-            btnSubmit.classList.remove("hidden");
-            btnSubmitclassList.add("show");
-        }
-    }
-</script>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
