@@ -12,7 +12,7 @@
 </script>
 
 <!-- reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdFqPArAAAAAN-Tksb4Wwc0BltzN9ulh5LRlvp7"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -1083,7 +1083,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                     <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
                                 </div>
                                 <div class="dragArea row">
-                    <form action="" class="contact__form">
+                    <form id="myForm" action="/submit-form" method="POST" class="contact__form">
                         <div class="contact__inputs">
                             <div class="contact__content" data-for="name">
                                 <input type="text" name="name" placeholder=" " class="contact__input" data-form-field="name" class="form-control" value="" id="name-form6-3" required />
@@ -1105,8 +1105,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                 <label for="" class="contact__label">Message*</label>
                             </div>
                         </div>
-<div class="g-recaptcha" data-sitekey="6LfLse8rAAAAAIuRnahSUf3mSfy1zuOJlQGemzLu"></div>
-                        <button type="submit" class="button button--flex">
+
+                        <button type="submit" id="submitButton" class="button button--flex">
                             Send Message
                             <i class="ri-arrow-right-up-line button__icon"></i>
                         </button>
@@ -1114,7 +1114,50 @@ window.addEventListener('beforeinstallprompt', (e) => {
                 </div>
             </section>
         </main>
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LdFqPArAAAAAN-Tksb4Wwc0BltzN9ulh5LRlvp7', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+              
+          });
+        });
+      }
+  </script>
+  <script>
+    // Get the form element
+    const form = document.getElementById('myForm');
 
+    form.addEventListener('submit', function(e) {
+        // 1. Prevent the default form submission
+        e.preventDefault();
+
+        // 2. Wait until the reCAPTCHA library is ready
+        grecaptcha.ready(function() {
+            // 3. Execute reCAPTCHA, specifying the site key and a unique 'action' name
+            // 'submit' is a common action name, but use a name that describes the action (e.g., 'login', 'signup')
+            grecaptcha.execute('6LdFqPArAAAAAN-Tksb4Wwc0BltzN9ulh5LRlvp7', {action: 'submit'}).then(function(token) {
+                // 4. Once the token is received, add it to the form data
+                
+                // Create a hidden input field for the token
+                const tokenInput = document.createElement('input');
+                tokenInput.setAttribute('type', 'hidden');
+                tokenInput.setAttribute('name', 'g-recaptcha-response');
+                tokenInput.setAttribute('value', token);
+
+                // Append the input to the form
+                form.appendChild(tokenInput);
+
+                // 5. Manually submit the form to your backend
+                form.submit();
+                
+                // Your backend server must then verify this token with Google.
+            });
+        });
+    });
+</script>
+ 
         <!--==================== FOOTER ====================-->
         <footer class="footer section">
             <div class="footer__container container grid">
