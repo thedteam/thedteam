@@ -1104,6 +1104,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
                                 <textarea name="message" placeholder=" " class="contact__input" data-form-field="message" class="form-control" value="" id="name-form6-3" required /></textarea>                              
                                 <label for="" class="contact__label">Message*</label>
                             </div>
+                            <div id="extra-data-container"></div>
                         </div>
 
                         <button type="submit" id="submitButton" class="button button--flex">
@@ -1282,6 +1283,22 @@ window.addEventListener('beforeinstallprompt', (e) => {
                             return false;
                         }
                     });
+                </script>
+
+                <script>
+                (function() {
+                 // This is your encoded HTML: <div class="hp-container"...
+                 var b64 = "PGRpdiBjbGFzcz0iaHAtY29udGFpbmVyIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PGxhYmVsIGZvcj0ibGFzdF9uYW1lX3ZhbCI+TGVhdmUgdGhpcyBmaWVsZCBibGFuazwvbGFiZWw+PGlucHV0IHR5cGU9InRleHQiIG5hbWU9Imxhc3RfbmFtZV92YWwiIGlkPSJsYXN0X25hbWVfdmFsIiBhdXRvY29tcGxldGU9Im9mZiI+PC9kaXY+";
+    
+                // Wait for the window to load
+                window.addEventListener('DOMContentLoaded', function() {
+                var target = document.getElementById('extra-data-container');
+                if (target) {
+                 // atob() decodes the Base64 string
+                target.innerHTML = window.atob(b64);
+                 }
+                });
+                })();
                 </script>
         
         <script language="JavaScript">
