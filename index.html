@@ -1259,7 +1259,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
                     <a href="https://amritmahotsav.nic.in/" target="_blank"><img src="assets/img/GOV/120w_75_azadi.png" ondragstart="return false;"></a>
                     <a href="https://www.g20.in/en/index.html" target="_blank"><img src="assets/img/GOV/G20.png" ondragstart="return false;"></a>
                  </div>
-            <p class="footer__copy"><br>🧡🤍💚</br>&#169; 2025 The 'D Team. All rigths reserved.</p>
+            <p class="footer__copy"><br>🧡🤍💚</br>&#169; <span id="copyright-year">2026</span> The 'D Team. All rigths reserved.</p>
         </footer>
     </div>
         
@@ -1360,6 +1360,16 @@ window.addEventListener('beforeinstallprompt', (e) => {
 	<style> 
 	.poptin-credit { display: none; }
 	</style>
+
+    <script>
+        // --- Dynamic Copyright Year ---
+        (function() {
+        const yearSpan = document.getElementById('copyright-year');
+        if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+        }
+        })();
+    </script>
 
     </body>
 </html>

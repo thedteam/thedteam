@@ -245,10 +245,18 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
+	    // --- Dynamic Copyright Year ---
+        (function() {
+        const yearSpan = document.getElementById('copyright-year');
+        if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+        }
+        })();
+
   </script>
 
 <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: #333; color: #ffffff; padding: 0px;">
-	🧡🤍💚 The 'D Team - Graphic | Print | Web &copy; 2025
+	🧡🤍💚 The 'D Team - Graphic | Print | Web &copy; <span id="copyright-year">2026</span>
   </footer>
 
 </body>

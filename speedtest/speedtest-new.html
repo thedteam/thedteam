@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test | The 'D Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0d1117;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            text-align: center;
+            padding: 50px 40px;
+            border-radius: 24px;
+            background: #161b22;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 600px;
+            width: 90%;
+            border: 1px solid #30363d;
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 1.2rem;
+            color: #8b949e;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .speed-display {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #speed-value {
+            font-size: 6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            min-width: 250px;
+        }
+        .unit {
+            font-size: 1.5rem;
+            color: #8b949e;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+        .metrics-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            border-top: 1px solid #30363d;
+            padding-top: 25px;
+            gap: 20px;
+        }
+        .metric-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            text-align: left;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .metric-name {
+            font-size: 1rem;
+            color: #c9d1d9;
+        }
+        .metric-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .metric-unit {
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin-left: 2px;
+        }
+        button {
+            margin-top: 40px;
+            background: #238636;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3);
+        }
+        button:hover:not(:disabled) {
+            background: #2ea043;
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            background: #1f4027;
+            color: #8b949e;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .loader {
+            width: 100%;
+            height: 4px;
+            background: #30363d;
+            border-radius: 2px;
+            margin-top: 30px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .loader.active {
+            opacity: 1;
+        }
+        .loader-bar {
+            height: 100%;
+            width: 30%;
+            background: #4facfe;
+            border-radius: 2px;
+            animation: loading 1s infinite linear;
+        }
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(350%); }
+        }
+                .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.85rem;
+            color: #8b949e;
+            z-index: 1;
+        }
+        .footer a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 500px) {
+            .metrics-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .metric-group {
+                border-left: none !important;
+                padding-left: 0 !important;
+                border-top: 1px solid #30363d;
+                padding-top: 20px;
+            }
+            .metric-group:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Download Speed</h1>
+        <div class="speed-display">
+            <span id="speed-value">0.0</span>
+            <span class="unit">Mbps</span>
+        </div>
+
+                
+        <div class="metrics-container">
+            <div class="metric-group">
+                <div class="metric-label">Latency</div>
+                <div class="metric-row">
+                    <span class="metric-name">Unloaded</span>
+                    <div>
+                        <span class="metric-val" id="latency-unloaded">--</span>
+                        <span class="metric-unit">ms</span>
+                    </div>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-name">Loaded</span>
+                    <div>
+                        <span class="metric-val" id="latency-loaded">--</span>
+                        <span class="metric-unit">ms</span>
+                    </div>
+                </div>
+            </div>
+            <div class="metric-group" style="border-left: 1px solid #30363d; padding-left: 20px;">
+                <div class="metric-label">Upload</div>
+                <div class="metric-row" style="margin-top: 10px;">
+                    <span class="metric-name">Speed</span>
+                    <div>
+                        <span class="metric-val" id="upload-value">--</span>
+                        <span class="metric-unit">Mbps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loader" id="loader">
+            <div class="loader-bar"></div>
+        </div>
+        <button id="start-btn" onclick="runSpeedTest()">Start Test</button>
+    </div>
+
+    <div class="footer">
+        Powered by <a href="https://www.thedteam.in" target="_blank">www.thedteam.in</a>
+    </div>
+
+    <script>
+        let isTesting = false;
+
+        async function measureLatency(count = 5) {
+            let total = 0;
+            let valid = 0;
+            for(let i=0; i<count; i++) {
+                const start = performance.now();
+                try {
+                    const controller = new AbortController();
+                    const timeout = setTimeout(() => controller.abort(), 2000); // 2 second timeout per ping
+                    await fetch("https://speed.cloudflare.com/__down?bytes=0&cb=" + Math.random(), { cache: "no-store", signal: controller.signal });
+                    clearTimeout(timeout);
+                    total += (performance.now() - start);
+                    valid++;
+                } catch(e) {}
+            }
+            return valid > 0 ? Math.round(total / valid) : '--';
+        }
+
+        async function runSpeedTest() {
+            if (isTesting) return;
+            isTesting = true;
+
+            const btn = document.getElementById('start-btn');
+            const speedValue = document.getElementById('speed-value');
+            const uploadValue = document.getElementById('upload-value');
+            const latencyUnloaded = document.getElementById('latency-unloaded');
+            const latencyLoaded = document.getElementById('latency-loaded');
+            const loader = document.getElementById('loader');
+
+            btn.disabled = true;
+            btn.innerText = 'Testing Latency...';
+            speedValue.innerText = '0.0';
+            uploadValue.innerText = '--';
+            latencyUnloaded.innerText = '--';
+            latencyLoaded.innerText = '--';
+            loader.classList.add('active');
+
+            // 1. Unloaded Latency Test
+            const unloaded = await measureLatency(5);
+            latencyUnloaded.innerText = unloaded;
+
+            // 2. Download Test
+            btn.innerText = 'Testing Download...';
+            const downUrl = "https://speed.cloudflare.com/__down?bytes=100000000";
+            const upUrl = "https://speed.cloudflare.com/__up";
+
+            
+            const testDurationMs = 12000; // Run for 12 seconds total
+            const concurrentConnections = 8; // Maximize TCP throughput with more streams
+            
+            let totalReceived = 0;
+            let testStartTime = 0;
+            let isTimeUp = false;
+            let warmUpBytes = 0;
+            let warmUpTime = 0;
+            let loadedLatencies = [];
+            let testController = new AbortController();
+
+            // Non-blocking, continuous pings for true loaded latency (bufferbloat) measurement
+            function startLoadedLatency() {
+                return setInterval(() => {
+                    if (isTimeUp) return;
+                    const start = performance.now();
+                    fetch("https://speed.cloudflare.com/__down?bytes=0&cb=" + Math.random(), { 
+                        cache: "no-store",
+                        signal: testController.signal
+                    }).then(() => {
+                        if (isTimeUp) return;
+                        loadedLatencies.push(performance.now() - start);
+                        if (loadedLatencies.length > 20) loadedLatencies.shift(); // Keep rolling average
+                        const avg = Math.round(loadedLatencies.reduce((a,b) => a + b, 0) / loadedLatencies.length);
+                        latencyLoaded.innerText = avg;
+                    }).catch(() => {});
+                }, 500);
+            }
+
+            // Worker function to download continuously
+            async function downloadThread() {
+                while (!isTimeUp) {
+                    try {
+                        const response = await fetch(downUrl + "&cb=" + Math.random(), { 
+                            cache: "no-store",
+                            signal: testController.signal
+                        });
+                        if (!response.ok) break;
+                        
+                        const reader = response.body.getReader();
+
+                        if (testStartTime === 0) testStartTime = performance.now();
+
+                        while (!isTimeUp) {
+                            const { done, value } = await reader.read();
+                            if (done) break;
+                            if (value) totalReceived += value.length;
+                        }
+
+                        if (isTimeUp) await reader.cancel().catch(() => {});
+                    } catch (e) {
+                        break; // Fetch aborted instantly triggers this catch
+                    }
+                }
+            }
+
+            try {
+                let threads = [];
+                for (let i = 0; i < concurrentConnections; i++) {
+                    threads.push(downloadThread());
+                }
+                let pingIntervalId = startLoadedLatency();
+
+
+                let lastReceived = 0;
+                let lastTime = performance.now();
+                let samples = [];
+
+                await new Promise(resolve => {
+                    const uiInterval = setInterval(() => {
+                        if (testStartTime === 0) return;
+                        const now = performance.now();
+                        const elapsedTotal = now - testStartTime;
+
+                        if (elapsedTotal >= 2500 && warmUpTime === 0) {
+                            warmUpTime = now;
+                            warmUpBytes = totalReceived;
+                        }
+
+                        if (elapsedTotal >= testDurationMs) {
+                            isTimeUp = true;
+                            testController.abort(); // Sever all hanging fetch streams instantly
+                            clearInterval(pingIntervalId);
+                            clearInterval(uiInterval);
+                            resolve();
+                        }
+
+                        const durationSecs = (now - lastTime) / 1000;
+                        const bytesSinceLast = totalReceived - lastReceived;
+
+                        if (durationSecs > 0 && bytesSinceLast > 0) {
+                            const speedBps = bytesSinceLast / durationSecs;
+                            const speedMbps = (speedBps * 8 / (1024 * 1024));
+                            samples.push(speedMbps);
+
+                            const recent = samples.slice(-4);
+                            const avgSpeed = recent.reduce((a, b) => a + b, 0) / recent.length;
+                            speedValue.innerText = avgSpeed.toFixed(1);
+                        }
+
+                        lastReceived = totalReceived;
+                        lastTime = now;
+                    }, 250); // Update UI more frequently
+                });
+
+                // We instantly proceed without awaiting threads to prevent hanging on stuck network queues
+
+                let finalSpeedMbps = 0;
+                const sustainedTime = (performance.now() - warmUpTime) / 1000;
+                const sustainedBytes = totalReceived - warmUpBytes;
+                
+                if (warmUpTime > 0 && sustainedTime > 0) {
+                    finalSpeedMbps = (sustainedBytes * 8 / (1024 * 1024)) / sustainedTime;
+                } else {
+                    const totalTime = (performance.now() - testStartTime) / 1000;
+                    finalSpeedMbps = (totalReceived * 8 / (1024 * 1024)) / totalTime;
+                }
+                
+                speedValue.innerText = finalSpeedMbps.toFixed(1);
+
+                                // 3. Upload Test
+                btn.innerText = 'Testing Upload...';
+                isTimeUp = false;
+                testStartTime = 0;
+                warmUpBytes = 0;
+                warmUpTime = 0;
+                let totalUploaded = 0;
+                lastReceived = 0;
+                lastTime = performance.now();
+                samples = [];
+                testController = new AbortController(); // Reset for upload test
+
+                // Create 1MB random payload chunks
+                const payloadSize = 1024 * 1024;
+                const payload = new Uint8Array(payloadSize);
+                for (let i = 0; i < payloadSize; i += 4096) payload[i] = Math.random() * 256;
+
+                let xhrs = [];
+                function uploadThreadXHR() {
+                    return new Promise(resolve => {
+                        if (isTimeUp) return resolve();
+                        const xhr = new XMLHttpRequest();
+                        xhrs.push(xhr);
+                        let lastLoaded = 0;
+                        xhr.open("POST", upUrl + "?cb=" + Math.random());
+                        xhr.upload.onprogress = (e) => {
+                            if (testStartTime === 0) testStartTime = performance.now();
+                            const diff = e.loaded - lastLoaded;
+                            totalUploaded += diff;
+                            lastLoaded = e.loaded;
+                        };
+                        xhr.onload = () => {
+                            xhrs = xhrs.filter(x => x !== xhr);
+                            isTimeUp ? resolve() : resolve(uploadThreadXHR());
+                        };
+                        xhr.onerror = () => {
+                            xhrs = xhrs.filter(x => x !== xhr);
+                            isTimeUp ? resolve() : resolve(uploadThreadXHR());
+                        };
+                        xhr.onabort = () => {
+                            xhrs = xhrs.filter(x => x !== xhr);
+                            resolve();
+                        };
+                        xhr.send(payload);
+                    });
+                }
+
+                threads = [];
+                for (let i = 0; i < concurrentConnections; i++) {
+                    threads.push(uploadThreadXHR());
+                }
+                pingIntervalId = startLoadedLatency();
+
+                await new Promise(resolve => {
+                    const uiInterval = setInterval(() => {
+                        if (testStartTime === 0) return;
+
+                        const now = performance.now();
+                        const elapsedTotal = now - testStartTime;
+
+                        if (elapsedTotal >= 2500 && warmUpTime === 0) {
+                            warmUpTime = now;
+                            warmUpBytes = totalUploaded;
+                        }
+
+                        if (elapsedTotal >= testDurationMs) {
+                            isTimeUp = true;
+                            testController.abort(); // Cancel hanging latency ping
+                            xhrs.forEach(xhr => xhr.abort());
+                            clearInterval(pingIntervalId);
+                            clearInterval(uiInterval);
+                            resolve();
+                        }
+
+                        const durationSecs = (now - lastTime) / 1000;
+                        const bytesSinceLast = totalUploaded - lastReceived;
+
+                        if (durationSecs > 0 && bytesSinceLast > 0) {
+                            const speedBps = bytesSinceLast / durationSecs;
+                            const speedMbps = (speedBps * 8 / (1024 * 1024));
+                            samples.push(speedMbps);
+                            const recent = samples.slice(-4);
+                            const avgSpeed = recent.reduce((a, b) => a + b, 0) / recent.length;
+                            uploadValue.innerText = avgSpeed.toFixed(1);
+                        }
+
+                        lastReceived = totalUploaded;
+                        lastTime = now;
+                    }, 250);
+                });
+
+                // We instantly proceed without awaiting threads
+
+                let finalUpMbps = 0;
+                const sustainedUpTime = (performance.now() - warmUpTime) / 1000;
+                const sustainedUpBytes = totalUploaded - warmUpBytes;
+                if (warmUpTime > 0 && sustainedUpTime > 0) {
+                    finalUpMbps = (sustainedUpBytes * 8 / (1024 * 1024)) / sustainedUpTime;
+                } else {
+                    const totalUpTime = (performance.now() - testStartTime) / 1000;
+                    finalUpMbps = (totalUploaded * 8 / (1024 * 1024)) / totalUpTime;
+                }
+                uploadValue.innerText = finalUpMbps.toFixed(1);
+
+
+
+            } catch (err) {
+                speedValue.innerText = "Err";
+                console.error("Speed test error:", err);
+            } finally {
+                isTesting = false;
+                btn.disabled = false;
+                btn.innerText = 'Restart Test';
+                loader.classList.remove('active');
+            }
+        }
+
+        // Automatically start the test when the page loads
+        window.onload = runSpeedTest;
+    </script>
+</body>
+</html>

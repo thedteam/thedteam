@@ -91,11 +91,11 @@ const ScrollableComponent = (props) => {
     return (React.createElement("div", { ref: ref, className: classNames("scrollable-component", props.className), id: props.id, onMouseDown: handleOnMouseDown, onMouseMove: handleOnMouseMove, onMouseUp: handleOnMouseUp, onMouseLeave: handleOnMouseUp }, props.children));
 };
 const WeatherSnap = () => {
-    const [temperature] = React.useState(N.rand(65, 85));
+    const [temperature] = React.useState(N.rand(18, 29));
     return (React.createElement("span", { className: "weather" },
-        React.createElement("i", { className: "weather-type", className: "fa-duotone fa-sun" }),
+        React.createElement("i", { className: "weather-type fa-solid fa-sun" }),
         React.createElement("span", { className: "weather-temperature-value" }, temperature),
-        React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0F")));
+        React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0C")));
 };
 const Reminder = () => {
     return (React.createElement("div", { className: "reminder" },
@@ -229,56 +229,56 @@ const Weather = () => {
         return [{
                 id: 1,
                 name: "Mon",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Sunny
             }, {
                 id: 2,
                 name: "Tues",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Sunny
             }, {
                 id: 3,
                 name: "Wed",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Cloudy
             }, {
                 id: 4,
                 name: "Thurs",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Rainy
             }, {
                 id: 5,
                 name: "Fri",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Stormy
             }, {
                 id: 6,
                 name: "Sat",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Sunny
             }, {
                 id: 7,
                 name: "Sun",
-                temperature: N.rand(60, 80),
+                temperature: N.rand(15, 27),
                 weather: WeatherType.Cloudy
             }].map((day) => {
             const getIcon = () => {
                 switch (day.weather) {
                     case WeatherType.Cloudy:
-                        return "fa-duotone fa-clouds";
+                            return "fa-solid fa-cloud";
                     case WeatherType.Rainy:
-                        return "fa-duotone fa-cloud-drizzle";
+                            return "fa-solid fa-cloud-rain";
                     case WeatherType.Stormy:
-                        return "fa-duotone fa-cloud-bolt";
+                            return "fa-solid fa-cloud-bolt";
                     case WeatherType.Sunny:
-                        return "fa-duotone fa-sun";
+                            return "fa-solid fa-sun";
                 }
             };
             return (React.createElement("div", { key: day.id, className: "day-card" },
                 React.createElement("div", { className: "day-card-content" },
                     React.createElement("span", { className: "day-weather-temperature" },
                         day.temperature,
-                        React.createElement("span", { className: "day-weather-temperature-unit" }, "\u00B0F")),
+                        React.createElement("span", { className: "day-weather-temperature-unit" }, "\u00B0C")),
                     React.createElement("i", { className: classNames("day-weather-icon", getIcon(), day.weather.toLowerCase()) }),
                     React.createElement("span", { className: "day-name" }, day.name))));
         });
@@ -288,13 +288,13 @@ const Weather = () => {
 const Tools = () => {
     const getTools = () => {
         return [{
-                icon: "fa-solid fa-air-conditioner",
+                icon: "fa-solid fa-snowflake",
                 id: 1,
                 image: "https://scottbrothersnc.com/wp-content/uploads/AC_A_002-ductless-AC-1.jpg",
                 label: "Connected",
                 name: "Air Conditioner"
             }, {
-                icon: "fa-solid fa-vent-damper",
+                icon: "fa-solid fa-fan",
                 id: 2,
                 image: "https://blog-123-bucket.s3.amazonaws.com/wp-content/uploads/2020/11/27043913/123design.CleanTech_UVC_air_purifier_hero_01-1024x683.jpg",
                 label: "Air Purifier",
@@ -306,19 +306,19 @@ const Tools = () => {
                 label: "Control",
                 name: "Apple TV"
             }, {
-                icon: "fa-solid fa-battery-bolt",
+                icon: "fa-solid fa-bolt",
                 id: 4,
                 image: "https://cdn.dribbble.com/users/937241/screenshots/3739479/power_3.jpg?compress=1&resize=800x600&vertical=top",
                 label: "Utilities",
                 name: "Energy Usage"
             }, {
-                icon: "fa-solid fa-router",
+                icon: "fa-solid fa-wifi",
                 id: 5,
                 image: "https://www.netgear.com/ie/media/WiFi_page_thin_banner_mobile_tcm161-129895.jpg",
                 label: "Network",
                 name: "Wifi"
             }, {
-                icon: "fa-solid fa-speaker",
+                icon: "fa-solid fa-volume-high",
                 id: 6,
                 image: "https://www.audiocontrol.com/wp-content/uploads/2020/05/new-home-theater-web-slide-v1.jpg",
                 label: "Audio",
@@ -336,7 +336,7 @@ const Tools = () => {
                     React.createElement("i", { className: classNames(tool.icon, "tool-card-icon") }))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-rectangles-mixed", id: "tools-section", title: "Other Controls" }, getTools()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-sliders", id: "tools-section", title: "Other Controls" }, getTools()));
 };
 const Restaurants = () => {
     const getRestaurants = () => {
@@ -396,7 +396,7 @@ const Movies = () => {
             }, {
                 desc: "Your Home Security Overview",
                 id: 4,
-                icon: "fa-solid fa-camera-security",
+                icon: "fa-solid fa-video",
                 image: "https://www.safewise.com/app/uploads/facebook-security-control-panel-comparison.jpg",
                 title: "Home Security System"
             }].map((movie) => {
@@ -413,7 +413,7 @@ const Movies = () => {
                     React.createElement("i", { className: movie.icon }))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-battery-bolt", id: "movies-section", scrollable: true, title: "Other Dashboards" }, getMovies()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-bolt", id: "movies-section", scrollable: true, title: "Other Dashboards" }, getMovies()));
 };
 const UserStatusButton = (props) => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
@@ -451,7 +451,7 @@ const Background = () => {
 };
 const Loading = () => {
     return (React.createElement("div", { id: "app-loading-icon" },
-        React.createElement("i", { className: "fa-solid fa-spinner-third" })));
+        React.createElement("i", { className: "fa-solid fa-spinner" })));
 };
 const AppContext = React.createContext(null);
 const App = () => {
